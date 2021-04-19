@@ -11,7 +11,7 @@ const Users: React.FC = () => {
     const {data: users, completed, loading} = useInfiniteScroll<UsersData, {delay: number; page: number; per_page?: number}, UsersData["data"]>({
         URL: USERS_LIST_URL,
         initialQueryParams: {
-            delay: 0,
+            delay: 3,
             page: 1,
             per_page: 6
         },
