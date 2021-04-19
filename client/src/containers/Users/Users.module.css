@@ -1,0 +1,34 @@
+.users-container {
+    display: flex;
+    flex-direction: column;
+    /*width: 25%;*/
+    /*height: 50%;*/
+    /*border: 1px solid;*/
+    /*border-radius: 5px;*/
+    padding: 1rem;
+    overflow: scroll;
+}
+
+.users-heading {
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+@media (min-width: 420px) {
+    .users-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        max-width: 420px;
+        height: 50%;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 1rem;
+        overflow: scroll;
+    }
+}

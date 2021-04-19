@@ -1,0 +1,11 @@
+.user {
+    display: grid;
+    grid-template-columns: minmax(3rem, 1fr) 4fr;
+    align-items: center;
+}
+
+.user__details {
+    /*font-size: calc(0.75rem + 1vmin);*/
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}

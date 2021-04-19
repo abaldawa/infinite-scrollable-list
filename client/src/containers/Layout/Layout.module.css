@@ -1,0 +1,11 @@
+.layout {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (min-width: 420px) {
+    .layout {
+        place-items: center;
+    }
+}
