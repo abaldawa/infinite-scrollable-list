@@ -7,16 +7,6 @@
     overflow: scroll;
 }
 
-.users-heading {
-    height: 100px;
-    background-color: lightgray;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
 @media (min-width: md-screen) {
     .users-container {
         width: 80%;
