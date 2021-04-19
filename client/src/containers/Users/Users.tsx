@@ -2,6 +2,7 @@ import React, {useRef} from "react";
 import classes from "./Users.module.css";
 import {useInfiniteScroll} from "../../hooks/useInfiniteScroll";
 import {UsersList} from "../../components/UsersList/UsersList";
+import {Loader} from "../../components/UI/Loader/Loader";
 import {UsersData} from "../../types/users";
 
 const Users: React.FC = () => {
@@ -30,10 +31,10 @@ const Users: React.FC = () => {
     });
 
     return (
-        <div className={classes["users-container"]}>
+        <div className={classes["users-container"]} >
             <UsersList users={users} />
             <div ref={loadingRef}>
-                {loading && <span>Loading...</span>}
+                <Loader loading={loading} color={"#8CB637"}/>
                 {completed && <span>completed :)</span>}
             </div>
         </div>
