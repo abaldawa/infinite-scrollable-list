@@ -1,5 +1,6 @@
 import React, {useRef} from "react";
 import classes from "./Users.module.css";
+import {USERS_LIST_URL} from "../../constants/userEndpoints";
 import {useInfiniteScroll} from "../../hooks/useInfiniteScroll";
 import {UsersList} from "../../components/UsersList/UsersList";
 import {Loader} from "../../components/UI/Loader/Loader";
@@ -8,9 +9,9 @@ import {UsersData} from "../../types/users";
 const Users: React.FC = () => {
     const loadingRef = useRef<HTMLDivElement | null>(null);
     const {data: users, completed, loading} = useInfiniteScroll<UsersData, {delay: number; page: number; per_page?: number}, UsersData["data"]>({
-        URL: 'https://reqres.in/api/users',
+        URL: USERS_LIST_URL,
         initialQueryParams: {
-            delay: 2,
+            delay: 0,
             page: 1,
             per_page: 6
         },
@@ -20,7 +21,6 @@ const Users: React.FC = () => {
         },
         hasCompleted(data: UsersData) {
             return data.page === data.total_pages;
-            // return !data.data.length;
         },
         getData(prevData: UsersData["data"] | undefined, fetchedData: UsersData){
             if(prevData) {
